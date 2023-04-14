@@ -40,6 +40,9 @@ app.use(cors());
 app.use(require('./routes/auth'));
 app.use(require('./routes/post'));
 app.use(require('./routes/user'));
+app.get('/',(req,res)=>{
+    res.send('hello world');
+})
 // app.use(require('./routes/conversation'));
 // app.use(require('./routes/message'));
 // app.use(require('./routes/google_auth_register'))
@@ -60,5 +63,5 @@ if( process.env.NODE_ENV === "production" ){
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-    console.log(`Connected on port : ${PORT}`);
+    console.log("connection established");
 });
