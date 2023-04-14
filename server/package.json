@@ -1,0 +1,32 @@
+{
+  "name": "webhub",
+  "version": "1.0.0",
+  "description": "Hub of all websites",
+  "main": "app.js",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.10.5",
+    "nodemon": "^2.0.22",
+    "twilio": "^3.84.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "start": "node app.js",
+    "client": "cd client && npm start",
+    "dev": "concurrently -n 'server,client' -c 'red,green' \"nodemon app.js\" \"npm run client\""
+  },
+  "keywords": [
+    "webhub",
+    "websites"
+  ],
+  "author": "Vishal Kumar Sahu",
+  "license": "ISC"
+}
