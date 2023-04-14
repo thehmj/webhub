@@ -1,6 +1,6 @@
 import React, {useEffect, useContext, createContext, useReducer} from 'react';
 import './App.css';
-import { BrowserRouter, HashRouter, Route, Routes, useNavigate } from 'react-router-dom'
+import { HashRouter, Route, Routes, useNavigate } from 'react-router-dom'
 
 import Login from './components/screens/login.js';
 import Signup from './components/screens/signup.js';
@@ -22,6 +22,7 @@ const Routing = ()=>{
 
   const navigate = useNavigate()
   const {state, dispatch} = useContext(UserContext)
+  console.log(state);
 
   useEffect(()=>{
     const user = JSON.parse(localStorage.getItem("user"))
@@ -33,6 +34,7 @@ const Routing = ()=>{
     else{
       navigate('/')
     }
+           //eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return(

@@ -2,14 +2,15 @@ import React, {useEffect, useState, useContext} from "react";
 import '../../styles/home.css'
 import { UserContext } from "../../App";
 
-import { useNavigate, Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import Navbar from "./navbar"
 
 const Profile = ()=>{
 
     const navigate = useNavigate()
-    const path = window.location.pathname
+    // const path = window.location.pathname
 
+    // eslint-disable-next-line  no-unused-vars
     const {state, dispatch} = useContext(UserContext)
 
     const [mypost, setMyPost] = useState([])
@@ -101,7 +102,7 @@ const Profile = ()=>{
                             mypost.map(item =>{
                                 return(
                                     <>
-                                        <li><a href={item.link} target="_blank" className="mainlink1">{item.title}</a><span className="date">-{item.date}</span><br></br>
+                                        <li><a href={item.link} target="_blank" rel="noopener noreferrer" className="mainlink1">{item.title}</a><span className="date">-{item.date}</span><br></br>
                                         <span>Contributors : {state ? state.name : "loading..." } & {item.contributor}</span></li>
                                         <button onClick={()=> deletePost(item._id)}> del</button>
                                         <button onClick={()=> editPost(item._id)}> edit</button>

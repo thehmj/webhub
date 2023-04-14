@@ -2,16 +2,17 @@ import React, {useEffect, useState, useContext} from "react";
 import '../../styles/home.css'
 import { UserContext } from "../../App";
 
-import { useNavigate, Link } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
 import { useParams } from "react-router-dom";
 import Navbar from "./navbar"
 
 const ViewProfile = ()=>{
 
-    const navigate = useNavigate()
-    const path = window.location.pathname
+    // const navigate = useNavigate()
+    // const path = window.location.pathname
 
     const {state, dispatch} = useContext(UserContext)
+    console.log(dispatch);
 
     const [userProfile, setProfile] = useState(null)
     
@@ -31,7 +32,7 @@ const ViewProfile = ()=>{
             console.log(result)
             setProfile(result)
         })
-
+//eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (
@@ -72,7 +73,7 @@ const ViewProfile = ()=>{
                             userProfile.posts.map(item =>{
                                 return(
                                     <>
-                                        <li><a href={item.link} target="_blank" className="mainlink1">{item.title}</a><span className="date">-{item.date}</span><br></br>
+                                        <li><a href={item.link} target="_blank" rel="noopener noreferrer" className="mainlink1">{item.title}</a><span className="date">-{item.date}</span><br></br>
                                         <span>Contributors : {state ? state.name : "loading..." } & {item.contributor}</span></li>
                                     </>
                                 )

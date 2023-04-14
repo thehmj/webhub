@@ -10,6 +10,7 @@ import { UserContext } from '../../App'
 
 const Login = () => {
     const { state, dispatch } = useContext(UserContext)
+    console.log(state);
     const navigate = useNavigate()
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
@@ -63,7 +64,7 @@ const Login = () => {
                         <MDBRow>
 
                             <MDBCol col='10' md='6'>
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" className="img-fluid" alt="Sample image" />
+                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" className="img-fluid" alt="Sample " />
                             </MDBCol>
 
                             <MDBCol col='4' md='6'>
@@ -79,7 +80,7 @@ const Login = () => {
 
                                             <div className="d-flex justify-content-between mx-2 mb-3">
                                                 <div></div>
-                                                <a onClick={() => forget()}>Forgot password?</a>
+                                                <div style={{textDecoration:"underline"}} onClick={() => forget()}> Forgot password ? </div>
                                             </div>
 
                                             <input className="input_ele" type="submit" value="Login" onClick={() => CheckData()} />

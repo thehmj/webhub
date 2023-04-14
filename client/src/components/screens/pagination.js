@@ -14,17 +14,17 @@ const Pagination = ({ postsPerPage, totalposts, paginate, currentPage }) => {
       
     <>
         <div className='pagenumber'  style={{textAlign:'center'}}>
-            <span><a className='pageno' onClick={() =>paginate(currentPage - 1)}>&nbsp;&nbsp;Previous&nbsp;&nbsp;</a></span>
+            <span><div className='pageno' onClick={() =>paginate(currentPage - 1)}>&nbsp;&nbsp;Previous&nbsp;&nbsp;</div></span>
             {pageNumbers.map(number =>(
                 <span>
                 
                 <span key={number}>
-                    <a className='pageno' onClick={() =>paginate(number)}>&nbsp;&nbsp;{number}&nbsp;&nbsp;</a>
+                    <div className='pageno' onClick={() =>paginate(number)}>&nbsp;&nbsp;{number}&nbsp;&nbsp;</div>
                 </span>
                 
                 </span>
             ))}
-            <span><a className='pageno'  onClick={() =>paginate(currentPage + 1)}>&nbsp;&nbsp;Next&nbsp;&nbsp;</a></span>
+            <span><div className='pageno'  onClick={() =>paginate(currentPage + 1)}>&nbsp;&nbsp;Next&nbsp;&nbsp;</div></span>
 
         </div>
     

@@ -17,6 +17,7 @@ import { useNavigate } from 'react-router-dom';
 export default function Navbar1() {
     // const path = window.location.pathname
     const {state, dispatch} = useContext(UserContext)
+    console.log(state);
 
     const navigate = useNavigate()
     

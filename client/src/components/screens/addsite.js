@@ -1,8 +1,8 @@
-import React, {useEffect, useState, useContext} from "react";
+import React, { useState} from "react";
 import '../../styles/home.css'
-import { UserContext } from "../../App";
+// import { UserContext } from "../../App";
 
-import { useNavigate, Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import Navbar from "./navbar"
 
 import M from 'materialize-css'

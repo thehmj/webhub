@@ -1,6 +1,6 @@
-import React, {useEffect, useState, useContext} from "react";
+import React, {useEffect, useState} from "react";
 import '../../styles/home.css'
-import { UserContext } from "../../App";
+// import { UserContext } from "../../App";
 
 import { useNavigate } from 'react-router-dom'
 import { useParams } from "react-router-dom";
@@ -17,7 +17,7 @@ const EditSite = ()=>{
     const [description, setDescription] = useState("");
     const [date, setDate] = useState("");
 
-    const [post, setPost] = useState(null)
+    // const [post, setPost] = useState(null)
     const {postId} = useParams();
     // console.log(postId)
 
@@ -53,9 +53,9 @@ const EditSite = ()=>{
             console.log(err)
         })
 
-    // }
-    // getPost();
 
+    // getPost();
+ //eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
 

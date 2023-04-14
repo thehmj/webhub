@@ -65,7 +65,7 @@ const Home = ()=>{
         .then(result=>{
             const newData = data.map(item =>{
                 // console.log(item)
-                if(item._id == result._id){
+                if(item._id === result._id){
                     return result
                 }
                 else{
@@ -229,7 +229,7 @@ const Home = ()=>{
                                     <>  
                                         <div className="linkcontaint">
                                         <a href={item.link} target="_blank" className="mainlink" rel="noreferrer noopener" onClick={()=> increaseCount(item._id)}>{item.title}</a>
-                                        <span style={{marginLeft : '80px'}} onClick={()=> increaseCount(item._id)}>By - <Link to={item.postedBy ? item.postedBy._id != state._id ? "/profile/" + item.postedBy._id : "/profile" : "loading..."}>{item.postedBy ? item.postedBy.username : "loading..."}</Link></span>
+                                        <span style={{marginLeft : '80px'}} onClick={()=> increaseCount(item._id)}>By - <Link to={item.postedBy ? item.postedBy._id !== state._id ? "/profile/" + item.postedBy._id : "/profile" : "loading..."}>{item.postedBy ? item.postedBy.username : "loading..."}</Link></span>
                                         <span style={{marginLeft : '120px'}}>Visitors Count - {item.visitorsCount}</span><br></br>
                                         <span><a href={item.link} target="_balnk" className="link" rel="noreferrer noopener">{item.link}</a></span><br></br>
                                         <span className="date">Release Date : {item.date}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

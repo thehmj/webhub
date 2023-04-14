@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-import { MDBContainer, MDBCol, MDBRow, MDBCard, MDBCardBody, MDBInput, MDBCheckbox } from 'mdb-react-ui-kit';
+import { MDBContainer, MDBCol, MDBRow, MDBCard, MDBCardBody, MDBInput } from 'mdb-react-ui-kit';
 import '../../styles/login.css'
 
 import { useNavigate, Link } from 'react-router-dom';
@@ -54,7 +54,7 @@ const   ForgetPasswordOtp = () => {
                 <MDBRow>
 
                     <MDBCol col='10' md='6'>
-                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" className="img-fluid" alt="Sample image" />
+                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" className="img-fluid" alt="Sample" />
                     </MDBCol>
 
                     <MDBCol col='4' md='6'>
