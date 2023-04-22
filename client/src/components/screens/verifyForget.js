@@ -52,7 +52,7 @@ const   ForgetPasswordOtp = () => {
             <MDBContainer fluid className="p-3 my-5">
 
                 <MDBRow>
-
+        
                     <MDBCol col='10' md='6'>
                         <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" className="img-fluid" alt="Sample" />
                     </MDBCol>
